@@ -2,7 +2,7 @@
 
 ### PyramidPHP presents alternative concept of connecting packages together for building realiable projects without dependency chaos.
 
-
+&nbsp;
 **PyramidPHP emphasizes importance of customized for specific need and locked if it works properly libraries dependency hierarchy.**
 
 This means it allows you to do your work if you want link dependencies in a non-constrained way (warning you about it but assuming
@@ -10,21 +10,21 @@ you are a responsible developer and supporting you by providing out-of-box testi
 it lets you freeze and export your dependency tree/trees by packing it into .phar file, and by that allowing you to export them in
 a change-resistant manner without managing and tracking bloated and obscure .lock files.
 
-
+&nbsp;
 **PyramidPHP emphasizes importance of well designed functional and integration tests to ensure that the software you create 
 depending on third-party open-source libraries is working as it meant to be.**
 
 This means it focuses on tests coverage and tests quality checks when decides about how properly connected and suited your 
 software packages are. Furthermore it aims to give you green light or warn you about dependency changes you want to conduct.
 
-
+&nbsp;
 PyramidPHP is against of resolving whole project dependencies at once based strictly and naively on package-maintainers provided
 dependency constraints. It is against of taking steerwheel away from end developer to compose its own software based on his needs
 if its desired. Yet it puts package-provided dependency constraints as first in queue to provide fully functional package resolution,
 though it does not stop there independently of results - aiming to give feedback about libraries compliance based on provided best 
 possible integration tests.
 
-
+&nbsp;
 Most importantly:
 1. It does not assume that open-source packages provides always correct and realiable versioning and constraints - yet it look at
    it first.
