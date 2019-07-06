@@ -1,17 +1,19 @@
 PyramidPHP
 ==========
 
-PyramidPHP presents alternative concept of connecting packages together for building realiable projects without dependency chaos.
---------------------------------------------------------------------------------------------------------------------------------
+### PyramidPHP presents alternative concept of connecting packages together for building realiable projects without dependency chaos.
 
-**PyramidPHP emphasizes importance of customized for specific need and locked if it works properly libraries dependency hierarchy.**
+
+##### PyramidPHP emphasizes importance of customized for specific need and locked if it works properly libraries dependency hierarchy.
+
 This means it allows you to do your work if you want link dependencies in a non-constrained way (warning you about it but assuming
 you are a responsible developer and supporting you by providing out-of-box testing tools to verify you expectations). Furthermore,
 it lets you freeze and export your dependency tree/trees by packing it into .phar file, and by that allowing you to export them in
 a change-resistant manner without managing and tracking bloated and obscure .lock files.
 
-**PyramidPHP emphasizes importance of well designed functional and integration tests to ensure that the software you create 
-depending on third-party open-source libraries is working as it meant to be.**
+##### PyramidPHP emphasizes importance of well designed functional and integration tests to ensure that the software you create 
+depending on third-party open-source libraries is working as it meant to be.
+
 This means it focuses on tests coverage and tests quality checks when decides about how properly connected and suited your 
 software packages are. Furthermore it aims to give you green light or warn you about dependency changes you want to conduct.
 
@@ -32,4 +34,4 @@ Most importantly:
    resolve version constraints never ending circle or forcing you to update well performing, production tested and already widely 
    used in project dependency because of update or addition in minor package, which can ruin your construction.
    
-**Instead of keeping house of cards untouched - build with pyramid!**
+##### Instead of keeping house of cards untouched - build with pyramid!
