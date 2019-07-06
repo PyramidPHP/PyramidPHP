@@ -1,6 +1,6 @@
 # PyramidPHP
 
-## PyramidPHP presents alternative concept of connecting packages together for building realiable projects without dependency chaos.
+### PyramidPHP presents alternative concept of connecting packages together for building realiable projects without dependency chaos.
 
 
 **PyramidPHP emphasizes importance of customized for specific need and locked if it works properly libraries dependency hierarchy.**
