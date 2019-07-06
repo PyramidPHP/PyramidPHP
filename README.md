@@ -3,7 +3,7 @@
 ConnectorPHP presents fresh concept for connecting together packages into realiable project in fault-unforgiving environments.
 
 
-ConnectorPHP emphasizes importance of well designed functional tests to assure that the software you create is working meant to be.
+ConnectorPHP emphasizes importance of well designed functional tests to assure that the software you create using third-party dependencies is working as it meant to be.
 
 This means it focuses on tests coverage and tests quality checks when decides about how properly connected and suited your 
 software packages are. Furthermore it aims to give you green light or warn you about dependency changes you want to conduct.
