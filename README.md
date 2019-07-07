@@ -5,7 +5,7 @@ PyramidPHP
 
 ---
 
-#### PyramidPHP emphasizes importance of customized for specific needs and locked if it works properly project dependency structure.
+#### PyramidPHP emphasizes importance of customized for specific needs - and locked if works properly - project dependencies resolution.
 
 This means it allows you to do your work if you want link dependencies in a non-constrained way (warning you about it but assuming
 you are a responsible developer and supporting you by providing out-of-box testing tools to verify you expectations). Furthermore,
