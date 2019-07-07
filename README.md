@@ -9,7 +9,7 @@ PyramidPHP
 
 This means it allows you to do your work if you want link dependencies in a non-constrained way (warning you about it but assuming
 you are a responsible developer and supporting you by providing out-of-box testing tools to verify you expectations). Furthermore,
-it lets you freeze and export your dependency tree/trees by packing it into .phar file, and by that allowing you to export them in
+it lets you freeze and export your dependency tree/s by packing it into .phar file, and by that allowing you to export them in
 a change-resistant manner without managing and tracking bloated and obscure .lock files.
 
 ---
