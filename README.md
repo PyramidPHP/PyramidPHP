@@ -25,7 +25,7 @@ PyramidPHP is against of resolving whole project dependencies at once based stri
 dependency constraints. It is against of taking steerwheel away from end developer to compose its own software based on his needs
 if its desired. Yet it puts package-provided dependency constraints as first in queue to provide fully functional package resolution,
 though it does not stop there independently of results - aiming to give feedback about libraries compliance based on provided best 
-possible integration tests.
+possible integration tests. PyramidPHP prevents you from getting stuck in impossible to resolve version constraints never ending circle or forcing you to update well performing, production tested and already widely used in project dependency because of update or addition in minor package, which can ruin your construction.
 
 ---
 
@@ -36,9 +36,8 @@ possible integration tests.
 3. It does not rush you to update your packages nor does not execute unexpectable side-effected multiple-dependency updates which
    might cause to broken project or hidden upredicted changes in behaviour.
 4. It gives you ability to freeze more than one dependency tree into .phar file/s, in most dissipated scenario - one .phar file
-   for each and every explicit dependency your project depends on - offering the possibility to have one library in many different          versions in one project - if your explicitly defined dependencies need it that way - without getting stuck in impossible to 
-   resolve version constraints never ending circle or forcing you to update well performing, production tested and already widely 
-   used in project dependency because of update or addition in minor package, which can ruin your construction.
+   for each and every package your project explicitly depends on - offering the possibility to have one library in more than one 
+   version in one project - if any of yours explicitly defined dependencies need it that way.
    
 ---
 #### Instead of keeping house of cards untouched - build with pyramid!
