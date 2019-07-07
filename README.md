@@ -28,13 +28,13 @@ possible integration tests. PyramidPHP prevents you from getting stuck in imposs
 
 ---
 
-#### Most importantly:
-1. It does not assume that open-source packages provides always correct and realiable versioning and constraints - yet it look at
+#### Most importantly PyramidPHP:
+1. Does not assume that open-source packages provides always correct and realiable versioning and constraints - yet it look at
    it first.
 2. Aims to provide realiable answer about package compliance based on functional tests wrote to check integrated functions.
-3. It does not rush you to update your packages nor does not execute unexpectable side-effected multiple-dependency updates which
+3. Does not rush you to update your packages nor does not execute unexpectable side-effected multiple-dependency updates which
    might cause to broken project or hidden upredicted changes in behaviour.
-4. It gives you ability to freeze more than one dependency tree into .phar file/s, in most dissipated scenario - one .phar file
+4. Gives you ability to freeze more than one dependency tree into .phar file/s, in most dissipated scenario - one .phar file
    for each and every package your project explicitly depends on - offering the possibility to have one library in more than one 
    version in one project - if any of yours explicitly defined dependencies need it that way.
    
