@@ -21,9 +21,8 @@ software packages are. Furthermore it aims to give you green light or warn you a
 
 ---
 
-PyramidPHP is against of resolving whole project dependencies at once based strictly and naively on package-maintainers provided
-dependency constraints. It is against of taking steerwheel away from end developer to compose its own software based on his needs
-if its desired. Yet it puts package-provided dependency constraints as first in queue to provide fully functional package resolution,
+PyramidPHP is against of resolving whole project dependencies at once based strictly and naively on package-maintainer provided constraints. It is against of taking steerwheel away from end developer to compose its own software based on his needs if its 
+desired. Yet it puts package-provided dependency constraints as first in queue to provide fully functional package resolution,
 though it does not stop there independently of results - aiming to give feedback about libraries compliance based on provided best 
 possible integration tests. PyramidPHP prevents you from getting stuck in impossible to resolve version constraints never ending circle or forcing you to update well performing, production tested and already widely used in project dependency because of update or addition in minor package, which can ruin your construction.
 
