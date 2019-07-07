@@ -35,7 +35,7 @@ possible integration tests. PyramidPHP prevents you from getting stuck in imposs
 3. Does not rush you to update your packages nor does not execute unexpectable side-effected multiple-dependency updates which
    might cause to broken project or hidden upredicted changes in behaviour.
 4. Gives you ability to freeze more than one dependency tree into .phar file/s, in most dissipated scenario - one .phar file
-   for each and every package your project explicitly depends on - offering the possibility to have one library in more than one 
+   for each and every package your project explicitly depends on - offering the possibility to have a library in more than one 
    version in one project - if any of yours explicitly defined dependencies need it that way.
    
 ---
