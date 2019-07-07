@@ -28,7 +28,7 @@ possible integration tests. PyramidPHP prevents you from getting stuck in imposs
 
 ---
 
-#### Most importantly - PyramidPHP :
+#### Most importantly - PyramidPHP:
 1. Does not assume that open-source packages provides always correct and realiable versioning and constraints - yet it look at
    it first.
 2. Aims to provide realiable answer about package compliance based on functional tests wrote to check integrated functions.
