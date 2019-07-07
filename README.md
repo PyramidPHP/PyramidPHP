@@ -14,7 +14,7 @@ in a change-resistant solid manner without managing and tracking changes in bloa
 
 ---
 
-#### PyramidPHP emphasizes importance of well designed functional and integration tests to ensure that the software you create depending on third-party open-source libraries is working as it meant to be.
+#### PyramidPHP emphasizes importance of well designed functional and integration tests to ensure that the software you create while depending on third-party open-source libraries is working as it meant to be.
 
 This means it focuses on tests coverage and tests quality checks when decides about how properly connected and suited your 
 software packages are. Furthermore it aims to give you green light or warn you about dependency changes you want to conduct.
