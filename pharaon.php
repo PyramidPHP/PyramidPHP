@@ -3,7 +3,7 @@
 namespace PyramidPHP;
 
 
-class Faraon
+class Pharaon
 {
     
     

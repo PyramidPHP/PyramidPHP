@@ -4,24 +4,13 @@ namespace PyramidPHP;
 
 
 
-class Pyramid extends \Thread
+class Pyramid extends Stone
 {
     
     private $stones         = [];
     private $name           = '';
     private $pyramidPlan    = '';
-    
-    private $architect;
-    private $quarries;
-    
-    
-    
-    public function __construct($name, $architect, $quarries)
-    {
-        $this->name      = $name;
-        $this->architect = $architect;
-        $this->quarries  = $quarries;
-    }
+
     
     
     public function build()
