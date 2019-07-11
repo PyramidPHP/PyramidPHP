@@ -1,6 +1,6 @@
 <?php
 
-namespace PyramidPHP;
+namespace PyramidsPHP;
 
 
 class Pharaon

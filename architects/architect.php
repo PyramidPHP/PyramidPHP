@@ -1,6 +1,6 @@
 <?php
 
-namespace PyramidPHP\Architects;
+namespace PyramidsPHP\Architects;
 
 
 class Architect extends \Thread
@@ -34,12 +34,26 @@ class Architect extends \Thread
     
     protected function makePlanFor($pyramid)
     {
-        $this->manuscripts->readAbout($pyramid);
+        $this->learnAbout($pyramid);
+        
+        
         
         
     }
     
     
+    
+    protected function learnAbout($pyramid)
+    {
+        $this->manuscripts->readAbout($pyramid);
+        
+    }
+
+
+
+
+
+
     protected function givePlanFor($pyramid)
     {
         return $this->plans[$pyramid];

@@ -1,9 +1,9 @@
 <?php
 
-namespace PyramidPHP;
+namespace PyramidsPHP;
 
 
-class Stone extends \Thread
+class Block extends \Thread
 {
     
     public $vendor;

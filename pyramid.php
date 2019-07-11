@@ -1,10 +1,9 @@
 <?php
 
-namespace PyramidPHP;
+namespace PyramidsPHP;
 
 
-
-class Pyramid extends Stone
+class Pyramid extends Block
 {
     
     private $stones         = [];
