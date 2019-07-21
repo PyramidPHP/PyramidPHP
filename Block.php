@@ -6,9 +6,9 @@ namespace PyramidsPHP;
 class Block extends \Thread
 {
     
-    public $vendor;
+    private $vendor;
     
-    public $package;
+    private $package;
     
     
     
@@ -17,4 +17,6 @@ class Block extends \Thread
         $this->vendor = $vendor;
         $this->package = $package;
     }
+    
+    
 }

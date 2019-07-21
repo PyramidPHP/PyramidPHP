@@ -11,11 +11,17 @@ class Architect extends \Thread
     protected $sketches;
     
     protected $manuscripts;
+    
+    protected $interests;
+    
+    protected $wisdom;
+    
+    protected $specialization = "INTEGRATION";
 
 
 
 
-    public function providePlan($pyramid)
+    public function providePlanFor($pyramid)
     {
         $this->havingPlanFor($pyramid) OR $this->makePlanFor($pyramid);
         
@@ -25,16 +31,15 @@ class Architect extends \Thread
     
     
     
-    
     protected function havingPlanFor($pyramid)
     {
-        return !empty($this->plans);
+        return !empty($this->plans[$pyramid]);
     }
     
     
     protected function makePlanFor($pyramid)
     {
-        $this->learnAbout($pyramid);
+        $this->learnAboutBlocksFor($pyramid);
         
         
         
@@ -44,8 +49,14 @@ class Architect extends \Thread
     
     
     protected function learnAbout($pyramid)
-    {
-        $this->manuscripts->readAbout($pyramid);
+    {   
+        $memory = $this->manuscripts->readAbout($pyramid, $this->interests);
+        
+        
+        
+        
+        
+        
         
     }
 
@@ -63,9 +74,10 @@ class Architect extends \Thread
     
     
     
-    public function __construct($manuscripts)
+    public function __construct(/*$specialization,*/ $manuscripts)
     {
-        $this->manuscripts = $manuscripts;
+        //$this->specialization   = $specialization;
+        $this->manuscripts      = $manuscripts;
     }
 }
 

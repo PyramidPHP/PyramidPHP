@@ -1,18 +1,14 @@
 <?php
 
 
-namespace PyramidsPHP\Wisdom;
-
-use PyramidsPHP\Block;
-use PyramidsPHP\Manuscripts\Manuscripts;
+namespace PyramidsPHP\Wisdom\Interests;
 
 
-
-class BlockInterests
+class All
 {
-    const BLOCK_WISDOM =
+    const TOPICS =
     [
-        "IDENTITY" => 
+        "NAME" =>
         [
             "VENDOR" => '$vendor',
             "PACKAGE" => '$package'
@@ -22,7 +18,7 @@ class BlockInterests
         [
             '[under_block]' =>
             [
-                "IDENTITY" => 
+                "NAME" => 
                 [
                     "VENDOR" => '$vendor',
                     "PACKAGE" => '$package'
@@ -43,6 +39,7 @@ class BlockInterests
         [
             '[quarry]' =>
             [
+                "SERVING_FOR" => ['[version]'],
                 "REGION" => '$region',
                 "LOCALITY" => '$locality'
             ]
