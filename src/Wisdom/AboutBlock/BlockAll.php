@@ -1,6 +1,6 @@
 <?php
 
-namespace PyramidsPHP\Wisdom\Block;
+namespace PyramidsPHP\Wisdom\AboutBlock;
 
 
 use PyramidsPHP\Wisdom;

@@ -1,22 +1,23 @@
 <?php declare(strict_types=1);
 
 
-namespace PyramidsPHP\Wisdom\Interests;
+namespace PyramidsPHP\Interests;
 
 
-abstract class Interests extends \ArrayObject
+class Interests extends \ArrayObject
 {
+
     const TOPICS = [
         /* schema array of interests */
     ];
-    
-    
+
+
     public function __construct()
     {
         parent::__construct(self::TOPICS);
     }
     
-    
+
     public function __get(string $nestedKeys)
     {
         $nestedKeys = explode(',', $nestedKeys);
@@ -49,4 +50,5 @@ abstract class Interests extends \ArrayObject
         }
         $prop = $value;
     }
+    
 }
