@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 
 
-namespace PyramidsPHP\Interests;
+namespace PyramidPHP\Interests;
 
 
 class Interests extends \ArrayObject
@@ -14,7 +14,7 @@ class Interests extends \ArrayObject
 
     public function __construct()
     {
-        parent::__construct(self::TOPICS);
+        parent::__construct(static::TOPICS);
     }
     
 

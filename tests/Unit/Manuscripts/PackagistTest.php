@@ -1,33 +1,34 @@
 <?php
 
-namespace PyramidsPHP\Tests\Unit\Manuscripts;
+namespace PyramidPHP\Tests\Unit\Manuscripts;
 
 use PHPUnit\Framework\TestCase;
 
-use PyramidsPHP\Manuscripts\Packagist;
-use PyramidsPHP\Wisdom\AboutBlock\Name;
-use PyramidsPHP\Interests\Block\BlockInterestOptions;
+use PyramidPHP\Manuscripts\Packagist;
+use PyramidPHP\Knowledge\AboutBlock\Name;
+use PyramidPHP\Interests\AboutBlock\IntegrationInterests;
 
 
 class PackagistTest extends TestCase
 {
 
-    /**
-     * @var Packagist $packagist
-     */
+    /** @var array */
+    private $testConfig;
+    /** @var Packagist */
     private $packagist;
     
     protected function setUp() : void
     {
-        $this->packagist = new Packagist(PACKAGIST_MOCK_INDEX_PATTERN);
+        $this->testConfig = TEST_CONFIG;
+        $this->packagist = new Packagist($this->testConfig['PACKAGIST_MOCK_INDEX_PATTERN']);
     }
 
 
 
     /**
-     * @dataProvider provide_readAbout_providedValidBlockNameAndInterests_gotCorrectInfoFromPackagistAboutProvidedExistingPackageRegardingToProvidedAvailableInterests
+     * @dataProvider provide_readAbout_providedValidBlockNameAndInterests_gotCorrectInfoFromPackagistAboutPackageRegardingToProvidedInterests
      */
-    public function test_readAbout_providedValidBlockNameAndInterests_gotCorrectInfoFromPackagistAboutProvidedExistingPackageRegardingToProvidedAvailableInterests(array $input, array $expected)
+    public function test_readAbout_providedValidBlockNameAndInterests_gotCorrectInfoFromPackagistAboutPackageRegardingToProvidedInterests(array $input, array $expected)
     {
         $result = $this->packagist->readAbout( $input['blockName'], $input['interests'] );
         $this->assertEquals($expected, $result);
@@ -39,7 +40,7 @@ class PackagistTest extends TestCase
     // ----------------------- PROVIDERS ----------------------- //
 
 
-    public function provide_readAbout_providedValidBlockNameAndInterests_gotCorrectInfoFromPackagistAboutProvidedExistingPackageRegardingToProvidedAvailableInterests()
+    public function provide_readAbout_providedValidBlockNameAndInterests_gotCorrectInfoFromPackagistAboutPackageRegardingToProvidedInterests()
     {
         return
         [
@@ -47,7 +48,7 @@ class PackagistTest extends TestCase
                 'input' =>
                 [
                     'blockName' => new Name('monolog', 'monolog'),
-                    'interests' => BlockInterestOptions::INTEGRATION
+                    'interests' => new IntegrationInterests()
                 ],
                 'expected' =>
                 [

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace PyramidsPHP\Manuscripts\Translators;
+namespace PyramidPHP\Manuscripts\Translators;
 
 
 

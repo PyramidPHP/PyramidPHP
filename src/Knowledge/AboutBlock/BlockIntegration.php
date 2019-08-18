@@ -1,11 +1,11 @@
 <?php
 
-namespace PyramidsPHP\Wisdom\AboutBlock;
+namespace PyramidPHP\Knowledge\AboutBlock;
 
-use PyramidsPHP\Block;
+use PyramidPHP\Block;
 
 
-class BlockIntegration extends Wisdom
+class BlockIntegration extends Knowledge
 {
     /** @var Identity $identity */
     private $identity;

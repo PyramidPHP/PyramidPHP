@@ -1,12 +1,12 @@
 <?php
 
-namespace PyramidsPHP\Wisdom;
+namespace PyramidPHP\Knowledge;
 
-use PyramidsPHP\Block;
-use PyramidsPHP\Manuscripts\Manuscripts;
+use PyramidPHP\Block;
+use PyramidPHP\Manuscripts\Manuscripts;
 
 
-class Wisdom
+class Knowledge
 {
     
     private $memory = [];
@@ -14,7 +14,7 @@ class Wisdom
             
     public function about($topic) : ?array
     {
-        return $this->memory
+        return $this->memory;
     }
     
     public function aquiredFrom() : Manuscripts

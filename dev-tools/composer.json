@@ -1,0 +1,12 @@
+{
+    "name": "jacek/dev-tools",
+    "require": {
+        "codedungeon/phpunit-result-printer": "^0.26.2"
+    },
+    "authors": [
+        {
+            "name": "Jacek Dziurdzikowski",
+            "email": "jacek.dziurdzikowski@gmail.com"
+        }
+    ]
+}

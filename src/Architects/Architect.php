@@ -1,6 +1,6 @@
 <?php
 
-namespace PyramidsPHP\Architects;
+namespace PyramidPHP\Architects;
 
 
 class Architect extends \Thread
@@ -14,7 +14,7 @@ class Architect extends \Thread
     
     protected $interests;
     
-    protected $wisdom;
+    protected $knowledge;
     
     protected $specialization = "INTEGRATION";
 

@@ -1,13 +1,15 @@
 <?php
 
-namespace PyramidsPHP;
+namespace PyramidPHP;
 
+
+use Josantonius\ErrorHandler\ErrorHandler;
 
 class Pharaon
 {
     
     
-    private $pyramids = [];
+    private $pyramid = [];
     
     
     public function __construct()
@@ -22,10 +24,15 @@ class Pharaon
         // autoloader init
         require_once(__DIR__ . "/../autoloader.php");
         $autoloader = new Paulyg\Autoloader();
-        $autoloader->addPsr0('PyramidsPHP', __DIR__);
+        $autoloader->addPsr0('PyramidPHP', __DIR__);
 
         // config init
         require_once(__DIR__ . "/config.php");
+
+        //error_handler init
+        require_once(__DIR__ . "/../ErrorHandler.php");
+        (new \ErrorHandler())->setErrorHandler();
+
         
     }
     

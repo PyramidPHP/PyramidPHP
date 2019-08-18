@@ -1,11 +1,11 @@
 <?php
 
 
-namespace PyramidsPHP\Interests\Block;
+namespace PyramidPHP\Interests\AboutBlock;
 
-use PyramidsPHP\Interests\Interests;
+use PyramidPHP\Interests\Interests as BaseInterests;
 
-class BlockInterests extends Interests
+class Interests extends BaseInterests
 {
     const TOPICS =
     [

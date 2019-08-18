@@ -1,9 +1,9 @@
 <?php
 
-namespace PyramidsPHP\Manuscripts;
+namespace PyramidPHP\Manuscripts;
 
 
-use PyramidsPHP\Wisdom\Block;
+use PyramidPHP\Knowledge\Block;
 
 
 interface Manuscript
@@ -20,7 +20,7 @@ interface Manuscript
 //    public function readAboutDemandFor($block) : Lore;
 //    
 //    
-//    public function readAboutIntegralBlocksOf(Block\Identity $block) : Block\BlockIntegration;
+//    public function readAboutIntegralBlocksOf(AboutBlock\Identity $block) : AboutBlock\BlockIntegration;
 //    
 //    
 //    public function readAboutMaintenanceBlocksOf($block) : Lore;

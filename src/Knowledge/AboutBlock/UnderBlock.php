@@ -1,6 +1,6 @@
 <?php
 
-namespace PyramidsPHP\Wisdom\AboutBlock;
+namespace PyramidPHP\Knowledge\AboutBlock;
 
 
 class UnderBlock

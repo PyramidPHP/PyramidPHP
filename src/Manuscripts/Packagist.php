@@ -1,12 +1,12 @@
-<?php
+<?php declare(strict_types=1);
 
-namespace PyramidsPHP\Manuscripts;
+namespace PyramidPHP\Manuscripts;
 
 
-use PyramidsPHP\Wisdom\AboutBlock\Name;
-use PyramidsPHP\Interests\Block\BlockInterestOptions as Interests;
+use PyramidPHP\Knowledge\AboutBlock\Name as BlockName;
+use PyramidPHP\Interests\AboutBlock\Interests as BlockInterests;
 
-use PyramidsPHP\Manuscripts\Translators\Translator;
+use PyramidPHP\Manuscripts\Translators\Translator;
 
 
 
@@ -14,40 +14,35 @@ use PyramidsPHP\Manuscripts\Translators\Translator;
 class Packagist //implements Manuscript
 {
 
-
     private $indexPattern;
 
 
-    public function __construct(string $indexPattern)
+    public function __construct (string $indexPattern)
     {
         $this->indexPattern = $indexPattern;
     }
 
 
-    public function readAbout(Name $blockName, array $interests = Interests::ALL ) // : Wisdom
+    public function readAbout (BlockName $blockName, BlockInterests $blockInterests) // : Knowledge
     {
-        if (!Interests::providedOptionExists($interests)) {
-            throw new \Exception("Interests option passed into ".__CLASS__ ."::".__METHOD__." is not defined in class enum " . Interests::class . "\n" . "Interests passed is: \n" . print_r($interests) );
-        }
-
         $index      = $this->getIndexOf($blockName);
         $contentRaw = file_get_contents($index);
         $content    = json_decode($contentRaw, /*assoc*/ true);
 
 
-        $interesting = $this->filterInterestingTopics($content, $interests);
+        $interesting = $this->filterInterestingTopics($content, $blockInterests);
         
-        //return new Wisdom();
+        //return new Knowledge();
     }
     
     
-    private function getIndexOf(Name $blockName) : string
+    private function getIndexOf(BlockName $blockName) : string
     {
         return str_replace(['{vendor}', '{package}'], [$blockName->getVendor(), $blockName->getPackage()], $this->indexPattern);
     }
 
 
-    private function translateContentIntoWisdom(array $content) : array
+    private function translateContentIntoKnowledge(array $content) : array
     {
         $translator = new Translator(self::TRANSLATION_RULES);
 
@@ -65,7 +60,7 @@ class Packagist //implements Manuscript
      * @throws Exceptions\UndefinedInterestMapping
      * @return array
      */
-    private function filterInterestingTopics(array $data, string $interests) : array
+    private function filterInterestingTopics(array $data, BlockInterests $interests) : array
     {
         $iterator = new \RecursiveIteratorIterator(new \RecursiveArrayIterator($interests), \RecursiveIteratorIterator::SELF_FIRST);
 

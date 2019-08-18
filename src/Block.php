@@ -1,6 +1,6 @@
 <?php
 
-namespace PyramidsPHP;
+namespace PyramidPHP;
 
 
 class Block extends \Thread

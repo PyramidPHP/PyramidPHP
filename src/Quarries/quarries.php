@@ -1,6 +1,6 @@
 <?php
 
-namespace PyramidsPHP\Quarries;
+namespace PyramidPHP\Quarries;
 
 
 interface Quarries
