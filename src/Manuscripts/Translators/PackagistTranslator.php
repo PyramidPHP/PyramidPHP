@@ -24,32 +24,32 @@ class PackagistTranslator extends Translator
     [
         "NAME" =>
         [
-            "VENDOR" => '$this->NameVendor()',
+            "VENDOR" => '$this->nameVendor()',
             
-            "PACKAGE" => '$this->NamePackage()'
+            "PACKAGE" => '$this->namePackage()'
         ],
 
-        "VERSIONS" => '$this->Versions()',
+        "VERSIONS" => '$this->versions()',
 
-        "UNDER_BLOCKS" => '$this->UnderBlocks()',
+        "UNDER_BLOCKS" => '$this->underBlocks()',
 
-        "QUARRIES" => '$this->Quarries()'
+        "QUARRIES" => '$this->quarries()'
     ];
     
     
     
     
-    private function NameVendor(array $data) : void
+    public function spellOutVendorName(array $data) : string
     {
-        $el = $data['package']['name'];
-        
-        $this->NameVendor = substr($el, 0, 
-            strpos($el, "/")
-        );
+        return substr(
+                    $el = $data['package']['name'],
+                    0,
+                    strpos($el, "/")
+                );
     }
-    
-    
-    private function NamePackage(array $data) : void
+
+
+    public function namePackage(array $data) : void
     {
         $el = $data['package']['name'];
         
@@ -57,15 +57,15 @@ class PackagistTranslator extends Translator
             strpos($el, "/") + 1
         );
     }
-    
-    
-    private function Versions(array $data) : void
+
+
+    public function versions(array $data) : void
     {
         $this->Versions = array_keys($data['package']['versions']);
     }
-   
-    
-    private function UnderBlocks(array $data) : void
+
+
+    public function underBlocks(array $data) : void
     {
         foreach ($data['package']['versions'] as $versionFor => $servingData) {
             if ( !empty($servingData['require']) ) {
@@ -73,8 +73,8 @@ class PackagistTranslator extends Translator
             }
         }
     }
-    
-    
+
+
     private function resolveUnderBlockServingSection(string $versionFor, array $servingList) : void
     {
         foreach ($servingList as $name => $recommended) {
@@ -99,18 +99,18 @@ class PackagistTranslator extends Translator
         }
         
     }
-    
-    
-    private function filterOut_underBlockServingConfig_withSameRecommendedSection(string $name, string $recommended) : array
+
+
+    public function filterOut_underBlockServingConfig_withSameRecommendedSection(string $name, string $recommended) : array
     {
         return array_filter($this->UnderBlocks[$name], function($servingSection) use ($recommended) {
             return $servingSection['recommended'] === $recommended;
         });
     }
-    
-    
-    
-    private function Quarries(array $data) : void
+
+
+
+    public function quarries(array $data) : void
     {
         foreach ($data['package']['versions'] as $versionFor => $versionData) {
             $this->Quarries[] = [

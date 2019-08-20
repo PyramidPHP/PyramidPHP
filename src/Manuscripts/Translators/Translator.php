@@ -5,6 +5,8 @@ namespace PyramidPHP\Manuscripts\Translators;
 
 
 
+use PyramidPHP\Knowledge\Knowledge;
+
 class Translator extends \ArrayObject
 {
     const TRANSLATION_RULES = [
@@ -16,7 +18,15 @@ class Translator extends \ArrayObject
     {
         parent::__construct(self::TRANSLATION_RULES);
     }
-    
+
+
+    public function translate(array $readInfo) : Knowledge
+    {
+
+    }
+
+
+
     
     public function __get(string $nestedKeys)
     {

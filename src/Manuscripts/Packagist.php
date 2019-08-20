@@ -68,12 +68,13 @@ class Packagist //implements Manuscript
         $actualDepthKeys = [];
 
         foreach ($iterator as $key => $value) {
+            $actualDepth = $iterator->getDepth();
 
-            if ($iterator->getDepth() > $lastDepth) {
+            if ($actualDepth > $lastDepth) {
                 $lastDepth = $iterator->getDepth();
                 $actualDepthKeys[] = $key;
             }
-            elseif ($iterator->getDepth() < $lastDepth) {
+            elseif ($actualDepth < $lastDepth) {
                 $lastDepth = $iterator->getDepth();
                 array_pop($actualDepthKeys);
                 array_pop($actualDepthKeys);

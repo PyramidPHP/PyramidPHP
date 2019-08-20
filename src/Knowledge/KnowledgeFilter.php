@@ -6,6 +6,7 @@ namespace Knowledge;
 
 
 
+use PyramidPHP\Interests\SpecificInterests;
 use PyramidPHP\Knowledge\Knowledge;
 
 class KnowledgeFilter
@@ -14,11 +15,45 @@ class KnowledgeFilter
 
     private $knowledge;
 
-    private $interestOption;
+    private $specificInterests;
 
 
-    public function __construct(Knowledge $knowledge, InterestOption $interestOption)
+    public function __construct(Knowledge $knowledge, SpecificInterests $specificInterests)
     {
-
+        $this->knowledge = $knowledge;
+        $this->specificInterests = $specificInterests;
     }
+
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
